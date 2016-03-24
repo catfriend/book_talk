@@ -1,14 +1,14 @@
 <div class="row">
-  <h1><%= @book.name %></h1>
+  <h1><%= @book.title %></h1>
 </div>
 <div class="row">
   <div class="columns medium-6">
     <p>
-      <%= @book.description %>
+      <%= @book.comments %>
     </p>
   </div>
   <div class="columns medium-6">
     <h3>Comments</h3>
-    <%= react_component('Commentist', {comments: raw(render(template: 'comments/index.json.jbuilder')) }) %>
+    <%= react_component('CommentList', {comments: raw(render(template: 'comments/index.json.jbuilder')) }) %>
   </div>
 </div>
